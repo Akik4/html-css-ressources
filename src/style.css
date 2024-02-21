@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(30, 30, 30);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.card-container a,
+.card-container-2 a {
+    display: grid;
+    place-items: center;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    font-size:110px;
+    text-decoration: none;
+    color: rgb(25, 25, 25)
+}
+
+.card-container,
+.card-container-2 {
+    background: rgb(60, 60, 60);
+    height: 300px;
+    width: 180px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-container::before {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 180%;
+    background: rgb(235, 235, 235);
+    transform: rotate(30deg);
+}
+.card-container::after {
+    position: absolute;
+    content: "";
+    background: rgb(60, 60, 60);
+    inset: 5px;
+}
+
+.card-container:hover::before
+{
+    animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
+
+.card-container-2::before {
+    position: absolute;
+    content: "";
+    height: 5%;
+    bottom: 0;
+    left: 0;
+    background: rgb(235, 235, 235);
+    transition: 0.5s;
+}
+
+.card-container-2:hover::before {
+    animation: slide 0.4s linear forwards;
+}
+
+@keyframes slide {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
