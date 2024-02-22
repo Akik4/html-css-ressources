@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'Poppins-Regular';
+      src: url('/ressource/fonts/Poppins/Poppins-Regular.eot'); /* IE9 Compat Modes */
+      src: url('/ressource/fonts/Poppins/Poppins-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+          url('/ressource/fonts/Poppins/Poppins-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+          url('/ressource/fonts/Poppins/Poppins-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+          url('/ressource/fonts/Poppins/Poppins-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+          url('/ressource/fonts/Poppins/Poppins-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(52, 52, 52);
+    font-family: 'Poppins-Regular';
+}
+
+header {
+    position: relative;
+    display: flex;
+    height: 80px;
+    min-width: 100vw;
+}
+#header-container {
+    height: 100%;
+    position: absolute;
+    background: rgb( 255, 253, 208);
+    inset: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+}
+
+#header-center,
+#header-right,
+#header-left {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#header-center {
+    flex: 1 1;
+}
+
+#header-center a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+}
+
+#header-center a:hover {
+    color: rgb(106, 105, 85);
+}
+
+#header-right a {
+    color: black;
+    text-decoration: none;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius:  50px;
+    transition: 0.5s;
+}
+
+#header-right a:hover {
+    transform: translateY(-5px);
+}
