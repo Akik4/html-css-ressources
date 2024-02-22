@@ -80,3 +80,91 @@ header {
 #header-right a:hover {
     transform: translateY(-5px);
 }
+
+@media screen and (max-width: 900px) {
+    header {
+        position: relative;
+        display: flex;
+        height: 20px;
+        min-width: 50px;
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+    }
+
+    #header-container {
+        height: 50px;
+        width: 10px;
+        position: absolute;
+        background: rgb( 255, 253, 208);
+        /* inset: 50px; */
+        border-radius: 50px;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+        /* padding: 0px 20px 0px 20px; */
+    }
+
+    #header-container::before {
+        content: "";
+    }
+
+    #header-container:hover #header-center *,
+    #header-container:hover #header-right *{
+        visibility: visible;
+    }
+    #header-container:hover::before {
+        position: absolute;
+        background: rgb( 255, 253, 208);
+        z-index: 1px;
+        height: 150px;
+        width: 100px;
+        top: 50px;
+        padding: 0;
+    }
+
+    #header-center {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        /* position: absolute; */
+        top: 50px
+    }
+
+    #header-center a {
+        padding: 0;
+    }
+
+    #header-right {
+        position: absolute;
+        display: flex;
+        flex: 1 0;
+        flex-direction: column;
+        gap: 0px; 
+        padding: 0;
+        top: 120px;
+        align-items: center;
+        justify-content: center;
+        flex-flow: wrap;
+        text-overflow: clip;
+        text-wrap: wrap;
+    }
+
+    #header-right a {
+        padding: 0;
+        color: black;
+        transition: inherit;
+        border-radius: inherit;
+        border: inherit;
+        gap: 0;
+    
+    }
+
+    #header-container * {
+        visibility: hidden;
+    }
+  }  
