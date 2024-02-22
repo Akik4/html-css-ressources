@@ -1,17 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
+body {
+    display: flex;
+    flex-direction: column;
 }
 
-body {
-    background: rgb(30, 30, 30);
-    min-height: 100vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+#body {
+    flex: 1 1;
 }
+
 
 .card-container a,
 .card-container-2 a {

@@ -5,8 +5,18 @@ use utils\Page;
 
 $test = new Page(); 
 
-$test->Displayheader();
+$test->DisplayHeader();
 
+?>
+
+<div id="body">
+
+
+</div>
+
+<?php
+
+$test->DisplayFooter();
 ?>
 
 <!-- 
